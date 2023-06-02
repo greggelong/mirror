@@ -3,7 +3,7 @@
 // hanzi art range from Greg Kreisman
 
 let grayscale = [' ', '.',':','-','=','+','*','#','%','@']
-let hanzi = ['善', '随', '俗', '若', '水', '乡', '上', '入', '。', '。']
+let hanzi = ['善', '随', '俗', '若', '水', '乡', '上', '入', '。', '。','。','。']
 let textOut;
 let capture;
 let hanziImg;

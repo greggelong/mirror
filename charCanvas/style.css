@@ -1,0 +1,20 @@
+html, body {
+ /* margin-left: 20px; */
+  padding-left: 20px;
+  font-family: monospace;
+  background-color: linen;
+  /*line-height: 0.3;*/
+  font-size: small;
+  white-space: pre-line; /* lets the dom use \n for line breaks */
+}
+canvas {
+  display: block;
+}
+
+
+textarea {
+ color:black; 
+  background: linen;
+  font-family: monospace;
+  font-size: x-small;
+}

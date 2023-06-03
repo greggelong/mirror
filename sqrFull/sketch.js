@@ -52,7 +52,8 @@ function draw() {
       //cindex = map(bright, 0, 255, 1, 8);
 
       //draw a random character on the large canvas with the brightness of each pixel on the small dom video
-      fill(greyscale[gscale]);
+      fill(greyscale[gscale]); // this is the restricted 
+      //fill(bright); // this is the full range
       // we need to multply by vscale to set the place for larger video
       //textSize(vScale);
       //text(random(chiChar), x * vScale, y * vScale);

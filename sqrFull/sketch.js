@@ -21,6 +21,7 @@ function setup() {
   pixelDensity(1);
   myvideo = createCapture(VIDEO);
   myvideo.size(width / vScale, height / vScale);
+  myvideo.hide();
   // video dom element , the source, will be smaller by vScale which is 40 by 30 to improve performance
   frameRate(5);
    

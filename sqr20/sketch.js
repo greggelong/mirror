@@ -5,6 +5,7 @@ let myvideo;
 let vScale; // global video scaling variable 
 //let greyscale = [0,32,64,96,128,160,192,224,255,255,255,255,255]
 let greyscale = [0,32,64,96,128,160,192,224,255]
+
 function setup() {
   createCanvas(600, 600); // larger canvas to draw to
 
@@ -34,7 +35,7 @@ function draw() {
       let g = myvideo.pixels[index + 1];
       let b = myvideo.pixels[index + 2];
 
-      let bright = floor(r + g + b) / 3 // the brightness or greyscale 0-255 is the average of the rgb
+      let bright = floor((r + g + b) / 3) // the brightness or greyscale 0-255 is the average of the rgb
       let gscale = floor(map(bright,0,255,0,greyscale.length-1))
       //print(gscale)
       // variable cindex is the index of the chineseChar

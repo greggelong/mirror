@@ -24,7 +24,7 @@ function setup() {
   background(255);
   myout = select('#output')
   textAlign(LEFT, TOP);
-  drawImage();
+  //drawImage();
    
    
   

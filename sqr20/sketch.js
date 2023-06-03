@@ -3,8 +3,8 @@
 // smaller capture video draw to canvas not pixel but shape or character
 let myvideo;
 let vScale; // global video scaling variable 
-let greyscale = [0,32,64,96,128,160,192,224,255,255,255,255,255]
-
+//let greyscale = [0,32,64,96,128,160,192,224,255,255,255,255,255]
+let greyscale = [0,32,64,96,128,160,192,224,255]
 function setup() {
   createCanvas(600, 600); // larger canvas to draw to
 
@@ -57,3 +57,15 @@ function draw() {
   //console.log('bing');
   //noLoop();
 }
+
+
+function keyPressed() {
+    // this will download the first 25 seconds of the animation!
+    //if (key === 'g') {
+    //  saveGif('reflection.gif', 15);
+   // }
+    if (key === 's') {
+      saveCanvas('reflection', 'jpg');
+    }
+    
+  }

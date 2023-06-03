@@ -24,12 +24,13 @@ function setup() {
   myvideo.hide();
   // video dom element , the source, will be smaller by vScale which is 40 by 30 to improve performance
   frameRate(5);
+  ellipseMode(CORNER)
    
 }
 
 
 function draw() {
-  background(255);
+  background(0);
 
   // load the myvideo to pixel array
   myvideo.loadPixels(); // gets a pixes arry for video capture
@@ -58,7 +59,7 @@ function draw() {
       //textSize(vScale);
       //text(random(chiChar), x * vScale, y * vScale);
       noStroke()
-      ellipse(x*vScale,y*vScale, vScale+gscale*2.7,vScale+gscale*2.7)
+      ellipse(x*vScale,y*vScale, vScale+(gscale+1)*3.7,vScale+(gscale+1)*3.7)
 
     }
 

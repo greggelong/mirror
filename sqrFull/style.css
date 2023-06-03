@@ -1,22 +1,8 @@
-.content {
-    width: 600px; 
-    margin: 0 auto;
-  }
+
 html, body {
-height: 100%;
+  margin: 0;
+  padding: 0;
 }
-
-body {
-padding: 3%;
-
-  color: #66FF00;
-  background-color: rgb(73, 5, 5);
-  font-size: large;
-  /*text-align: center;*/
-  font-family: monospace; 
-/* This centers our sketch horizontally. */
-justify-content: center;
-
-/* This centers our sketch vertically.  
-align-items: center;*/
+canvas {
+  display: block;
 }

@@ -7,12 +7,20 @@ let vScale; // global video scaling variable
 let greyscale = [0,32,64,96,128,160,192,224,255]
 
 function setup() {
-  createCanvas(600, 600); // larger canvas to draw to
+  createCanvas(windowWidth, windowHeight); // larger canvas to draw to
 
-  vScale = width/20
+  if (width < height) {
+    vScale = width / 30; // vScale tied to window width so it can work on phone and computer
+    console.log("by width");
+
+  } else {
+
+    vScale = floor(height / 30);
+    console.log("by height");
+  }
   pixelDensity(1);
   myvideo = createCapture(VIDEO);
-  myvideo.size(20, 20);
+  myvideo.size(width / vScale, height / vScale);
   // video dom element , the source, will be smaller by vScale which is 40 by 30 to improve performance
   frameRate(5);
    
@@ -20,7 +28,7 @@ function setup() {
 
 
 function draw() {
-  background(0);
+  background(255);
 
   // load the myvideo to pixel array
   myvideo.loadPixels(); // gets a pixes arry for video capture
@@ -47,7 +55,7 @@ function draw() {
       // we need to multply by vscale to set the place for larger video
       //textSize(vScale);
       //text(random(chiChar), x * vScale, y * vScale);
-      //noStroke()
+      noStroke()
       rect(x*vScale,y*vScale, vScale,vScale)
 
     }

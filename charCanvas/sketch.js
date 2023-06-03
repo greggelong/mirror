@@ -22,8 +22,9 @@ function setup() {
   
   pixelDensity(1);
   background(255);
-  //myout = select('#output')
+  myout = select('#output')
   textAlign(LEFT, TOP);
+  drawImage();
    
    
   
@@ -121,7 +122,7 @@ function drawImage(){
     
     
   }
-   //myout.html(textrow);
+   myout.html(textrow);
    createP(textrow);
    
   

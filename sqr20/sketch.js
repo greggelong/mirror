@@ -3,41 +3,18 @@
 // smaller capture video draw to canvas not pixel but shape or character
 let myvideo;
 let vScale; // global video scaling variable 
-let chiChar = ["镜", "花", "月", "水", "破", "重", "圆", "明", "高", "悬"];
-let cindex = 0;
-let dian;
-let ge;
-let long;
-
+let greyscale = [0,32,64,96,128,160,192,224,255,255,255,255,255]
 
 function setup() {
-  createCanvas(windowWidth, windowHeight); // larger canvas to draw to
+  createCanvas(600, 600); // larger canvas to draw to
 
-  if (width < height) {
-    vScale = width / 30; // vScale tied to window width so it can work on phone and computer
-    console.log("by width");
-
-  } else {
-
-    vScale = height / 30;
-    console.log("by height");
-  }
+  vScale = width/20
   pixelDensity(1);
   myvideo = createCapture(VIDEO);
   myvideo.size(width / vScale, height / vScale);
   // video dom element , the source, will be smaller by vScale which is 40 by 30 to improve performance
   frameRate(5);
-  dian= createElement('h1',"电");
-  dian.position((vScale*3),height-(vScale*10))
-  dian.style('color','red');
-  ge= createElement('h1',"哥");
-  ge.position((vScale*3),height-(vScale*7.5))
    
-  ge.style('color','red');
-  long= createElement('h1',"龙");
-  long.position((vScale*3),height-(vScale*6))
-   
-  long.style('color','red');
 }
 
 
@@ -57,17 +34,19 @@ function draw() {
       let g = myvideo.pixels[index + 1];
       let b = myvideo.pixels[index + 2];
 
-      let bright = (r + g + b) / 3 // the brightness or greyscale 0-255 is the average of the rgb
-
+      let bright = floor(r + g + b) / 3 // the brightness or greyscale 0-255 is the average of the rgb
+      let gscale = floor(map(bright,0,255,0,greyscale.length-1))
+      //print(gscale)
       // variable cindex is the index of the chineseChar
 
       //cindex = map(bright, 0, 255, 1, 8);
 
       //draw a random character on the large canvas with the brightness of each pixel on the small dom video
-      fill(bright);
+      fill(greyscale[gscale]);
       // we need to multply by vscale to set the place for larger video
-      textSize(vScale);
-      text(random(chiChar), x * vScale, y * vScale);
+      //textSize(vScale);
+      //text(random(chiChar), x * vScale, y * vScale);
+      rect(x*vScale,y*vScale, vScale,vScale)
 
     }
 

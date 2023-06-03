@@ -11,7 +11,7 @@ function setup() {
   vScale = width/20
   pixelDensity(1);
   myvideo = createCapture(VIDEO);
-  myvideo.size(width / vScale, height / vScale);
+  myvideo.size(20, 20);
   // video dom element , the source, will be smaller by vScale which is 40 by 30 to improve performance
   frameRate(5);
    
@@ -46,6 +46,7 @@ function draw() {
       // we need to multply by vscale to set the place for larger video
       //textSize(vScale);
       //text(random(chiChar), x * vScale, y * vScale);
+      //noStroke()
       rect(x*vScale,y*vScale, vScale,vScale)
 
     }

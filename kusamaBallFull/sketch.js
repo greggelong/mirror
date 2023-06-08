@@ -69,7 +69,7 @@ function keyPressed() {
     //  saveGif('reflection.gif', 15);
    // }
     if (key === 's') {
-      saveCanvas('kusamaBall', 'jpg');
+      saveCanvas('kusamaBallC', 'jpg');
     }
     
   }

@@ -77,7 +77,7 @@ function keyPressed() {
     //  saveGif('reflection.gif', 15);
    // }
     if (key === 's') {
-      saveCanvas('reflection', 'jpg');
+      saveCanvas('ballA', 'jpg');
     }
     
   }

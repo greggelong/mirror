@@ -85,7 +85,7 @@ function keyPressed() {
     //  saveGif('reflection.gif', 15);
    // }
     if (key === 's') {
-      saveCanvas('hanziFull', 'jpg');
+      saveCanvas('characterA', 'jpg');
     }
     
   }

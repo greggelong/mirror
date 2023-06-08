@@ -79,7 +79,7 @@ function keyPressed() {
     //  saveGif('reflection.gif', 15);
    // }
     if (key === 's') {
-      saveCanvas('charFull', 'jpg');
+      saveCanvas('characterB', 'jpg');
     }
     
   }

@@ -74,7 +74,7 @@ function keyPressed() {
     //  saveGif('reflection.gif', 15);
    // }
     if (key === 's') {
-      saveCanvas('posterize', 'jpg');
+      saveCanvas('squareB', 'jpg');
     }
     
   }

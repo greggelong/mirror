@@ -10,7 +10,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight); // larger canvas to draw to
 
   if (width < height) {
-    vScale = width / 30; // vScale tied to window width so it can work on phone and computer
+    vScale = floor(width / 30); // vScale tied to window width so it can work on phone and computer
     console.log("by width");
 
   } else {
